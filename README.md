@@ -1,4 +1,4 @@
-6. # LearningPowerBI_Custom_Visual
+# LearningPowerBI_Custom_Visual
 The path I learn to create Power BI_Custom_Visual
 ## Preparation
 1. Install [Node.js](https://nodejs.org/en/download/) (64-bit or 32-bit)
