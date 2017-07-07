@@ -1,4 +1,4 @@
-# LearningPowerBI_Custom_Visual
+ # LearningPowerBI_Custom_Visual
 The path I learn to create Power BI_Custom_Visual
 ## Preparation
 1. Install [Node.js](https://nodejs.org/en/download/) (64-bit or 32-bit)
@@ -11,10 +11,17 @@ The path I learn to create Power BI_Custom_Visual
 2. Go to the your folder `cd yourfolderpath`
 3. Execute `npm install -g powerbi-visuals-tools`
 4. Install a self-signed SSL certificate for the SSL address of https://localhost `pbiviz --install-cert`
-### Set up D3 library and Typescript
+### Set up D3 library
 1. Go to your custom visual folder
 2. Execute `npm install d3@3 -save-dev`
 3. Go to __package.json__ to check if this installation is succeeded
+4. Open __pbiviz.json__ and locate __externalJS__
+5. Update the array for the __externalJS__ setting by adding the __path__ to __d3.js__
+### Set up Typescript
+1. Return to the Node.js command prompt
+2. Execute `npm install @types/d3@3 --save`
+3. Opern __tsonfig.json__ and locate __files__
+4. Update the array for the __tsonfig.json__ setting by adding the __path__ to __index.d.ts__
 ## Hello World!
 1. Return to Node.js command prompt
 2. Execute `md CustomVisuals` to create a folder for your practice, and then cd to that folder
