@@ -1,9 +1,9 @@
+# Blank Visual
 
-module powerbi.extensibility.visual {
+`module powerbi.extensibility.visual {`
 
-     export vlass Visual implements IVsual {
-         
-         constructor(options: VisualConstuctorOptions) {
+      export vlass Visual implements IVsual {
+         `constructor(options: VisualConstuctorOptions) {
          }
            
          public update(options: VisualUpdateOptions) {
