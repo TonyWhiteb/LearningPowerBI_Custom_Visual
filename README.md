@@ -22,6 +22,13 @@ The path I learn to create Power BI_Custom_Visual
 2. Execute `npm install @types/d3@3 --save`
 3. Opern __tsonfig.json__ and locate __files__
 4. Update the array for the __tsonfig.json__ setting by adding the __path__ to __index.d.ts__
+### Set up Dataviewutils
+1. Return to the Node.js command prompt
+2. Execute `npm install powerbi-visuals-utils-dataviewutils --save`
+3. Opern __tsonfig.json__ and locate __files__
+4. Update the array for the __tsonfig.json__ setting by adding the __path__ to __index.d.ts__
+5. Open __pbiviz.json__ and locate __externalJS__
+6. Update the array for the __externalJS__ setting by adding the __path__ to __index.js__
 ## Hello World!
 1. Return to Node.js command prompt
 2. Execute `md CustomVisuals` to create a folder for your practice, and then cd to that folder
