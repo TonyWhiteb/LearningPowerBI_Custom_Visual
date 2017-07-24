@@ -12,6 +12,9 @@
     "node_modules/powerbi-visuals-utils-dataviewutils/lib/index.d.ts",
     "src/settings.ts",
     "src/visual.ts",
-    "node_modules/@types/d3/index.d.ts"
+    "node_modules/@types/d3/index.d.ts",
+    "node_modules/powerbi-visuals-utils-typeutils/lib/index.d.ts",
+    "node_modules/powerbi-visuals-utils-svgutils/lib/index.d.ts",
+    "node_modules/powerbi-visuals-utils-interactivityutils/lib/index.d.ts"
   ]
 }
