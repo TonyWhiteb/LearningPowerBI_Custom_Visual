@@ -1,16 +1,24 @@
 
 module powerbi.extensibility.visual {
-
+   
     export class Visual implements IVisual {
         private host: IVisualHost; 
         private svg: d3.Selection<SVGElement>; 
-        private container: d3.Selection<SVGElement>; 
-
+        private container: d3.Selection<SVGElement>;
         private textValue: d3.Selection<SVGElement>; 
-        private textLabel: d3.Selection<SVGElement>; 
+        private textLabel: d3.Selection<SVGElement>;
+        private selectionIdBuilder: ISelectionIdBuilder; 
+        private selectionManager: ISelectionManager;
+        private selectionId: ISelectionId;
 
-
+        
         constructor(options: VisualConstructorOptions) {
+
+            this.selectionId = options.host.createSelectionIdBuilder();
+
+            
+            this.selectionManager = options.host.createSelectionManager();
+
             this.svg = d3.select(options.element)  
                          .append('svg')  
                          .classed('circleCard', true); 
@@ -28,24 +36,27 @@ module powerbi.extensibility.visual {
             let dataView: DataView = options.dataViews[0];
             let width: number = options.viewport.width; 
             let height: number = options.viewport.height; 
-            
+            let selectionManager  = this.selectionManager;
+
             this.svg.attr({  
                 width: width,  
                 height: height 
             }); 
 
-            
-                
+            let tests = this.textValue.text(dataView.single.value as number) ;
+
             let fontSizeValue: number = Math.min(width, height) / 2; 
             
-            this.textValue  
-                .text(dataView.single.value as number)  
-                .attr({   
+            tests.attr({   
                     x: "50%", 
                     y: "50%",   
                     dy: "0.35em",   
                     "text-anchor": "middle"  
                 }).style("font-size", fontSizeValue + "px"); 
+
+
+
+
                 
             let fontSizeLabel: number = fontSizeValue / 4; 
             
